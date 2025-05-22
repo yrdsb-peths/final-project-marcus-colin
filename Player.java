@@ -15,7 +15,10 @@ public class Player extends Actor
     
     public Player()
     {
-        setRotation(270);
+        GreenfootImage myImage = getImage();
+        int myNewHeight = (int)myImage.getHeight()/4;
+        int myNewWidth = (int)myImage.getWidth()/4;
+        myImage.scale(myNewWidth, myNewHeight);
     }
     public void act()
     {
@@ -26,7 +29,11 @@ public class Player extends Actor
     {
         if(Greenfoot.isKeyDown("right"))
         {
-            move(5);
+            setLocation(getX()+5, getY());
+        }
+        if(Greenfoot.isKeyDown("left"))
+        {
+            setLocation(getX()-5, getY());
         }
     }
 }
