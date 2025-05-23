@@ -8,23 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy1 extends Enemy
 {
-    /**
-     * Act - do whatever the Enemy1 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
+    int speed = 2;
     
     public Enemy1()
     {
         setRotation(90);
     }
-    
     public void act()
     {
-        moveEnemy();
+        moveEnemy();        
     }
-    
-    public void moveEnemy1()
-    {
-        
-    }
+     
 }

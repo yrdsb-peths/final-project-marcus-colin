@@ -19,7 +19,6 @@ public class Enemy extends Actor
     
     public void moveEnemy()
     {
-        move(3);
         setLocation(getX(), getY()+3);
     }
 }
