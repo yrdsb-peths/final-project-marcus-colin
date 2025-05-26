@@ -13,7 +13,11 @@ public class Enemy1 extends Enemy
     
     public Enemy1()
     {
-        setRotation(90);
+        GreenfootImage myImage = new GreenfootImage("5454-valorant-jett-icon.png");
+        int myNewHeight = (int)myImage.getHeight()/4;
+        int myNewWidth = (int)myImage.getWidth()/4;
+        myImage.scale(myNewWidth, myNewHeight);
+        setImage(myImage);
     }
     public void act()
     {
