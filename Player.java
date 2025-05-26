@@ -15,10 +15,11 @@ public class Player extends Actor
     
     public Player()
     {
-        GreenfootImage myImage = getImage();
+        GreenfootImage myImage = new GreenfootImage("EnemySpaceship.png");
         int myNewHeight = (int)myImage.getHeight()/4;
         int myNewWidth = (int)myImage.getWidth()/4;
         myImage.scale(myNewWidth, myNewHeight);
+        setImage(myImage);
     }
     public void act()
     {
