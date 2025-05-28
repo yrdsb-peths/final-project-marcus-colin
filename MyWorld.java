@@ -6,6 +6,9 @@ public class MyWorld extends World {
         
         Player player = new Player();
         addObject(player, 300, 500);
+        
+        GreenfootImage backgroundImage = new GreenfootImage("spacebg.png");
+        setBackground(backgroundImage);
 
         
     }  
