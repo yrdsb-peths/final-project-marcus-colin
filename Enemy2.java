@@ -16,10 +16,15 @@ public class Enemy2 extends Enemy
     
     public Enemy2()
     {
-        //
+        GreenfootImage myImage = new GreenfootImage("iso.png");
+        int myNewHeight = (int)myImage.getHeight()/4;
+        int myNewWidth = (int)myImage.getWidth()/4;
+        myImage.scale(myNewWidth, myNewHeight);
+        setImage(myImage);
     }
     public void act()
     {
         moveEnemy();
+        removeEnemy();
     }
 }

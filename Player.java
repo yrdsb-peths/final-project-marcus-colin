@@ -24,6 +24,7 @@ public class Player extends Actor
     public void act()
     {
         moveAround();
+        fireProjectile();
     }
     
     public void moveAround()
@@ -37,4 +38,13 @@ public class Player extends Actor
             setLocation(getX()-5, getY());
         }
     }
+    
+    public void fireProjectile()
+    {
+        if (Greenfoot.isKeyDown("space"))
+        {
+            getWorld().addObject(new Projectile(), getX(), getY()-30);
+        }
+    }
+    
 }
