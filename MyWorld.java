@@ -15,14 +15,23 @@ public class MyWorld extends World {
     
     public void act()
     {
-        if(Greenfoot.getRandomNumber(60)<1)
-        {
           addEnemy1();  
-        }
+          addEnemy2();
     }
+    
     
     public void addEnemy1()
     {
-        addObject(new Enemy1(), Greenfoot.getRandomNumber(600), 0);
+        if(Greenfoot.getRandomNumber(60)<1)
+        {
+            addObject(new Enemy1(), Greenfoot.getRandomNumber(600), 0);
+        }
+    }
+    public void addEnemy2()
+    {
+        if(Greenfoot.getRandomNumber(60)<1)
+        {
+            addObject(new Enemy2(), Greenfoot.getRandomNumber(600), 0);
+        }
     }
 }
