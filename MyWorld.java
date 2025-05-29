@@ -18,11 +18,17 @@ public class MyWorld extends World {
         if(Greenfoot.getRandomNumber(60)<1)
         {
           addEnemy1();  
+          addEnemy2();
         }
     }
     
     public void addEnemy1()
     {
         addObject(new Enemy1(), Greenfoot.getRandomNumber(600), 0);
+    }
+    
+    public void addEnemy2()
+    {
+        addObject(new Enemy2(), Greenfoot.getRandomNumber(600), 0);
     }
 }
