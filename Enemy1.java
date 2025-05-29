@@ -15,7 +15,7 @@ public class Enemy1 extends Enemy
     {
         GreenfootImage myImage = new GreenfootImage("5454-valorant-jett-icon.png");
         int myNewHeight = (int)myImage.getHeight()/4;
-        int myNewWidth = (int)myImage.getWidth()/4;
+        int myNewWidth = (int)myImage.getWidth()/3;
         myImage.scale(myNewWidth, myNewHeight);
         setImage(myImage);
     }
