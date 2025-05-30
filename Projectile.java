@@ -16,7 +16,7 @@ public class Projectile extends Actor
     {
         GreenfootImage myImage = new GreenfootImage("vandall.png");
         int myNewHeight = (int)myImage.getHeight()/4;
-        int myNewWidth = (int)myImage.getWidth()/6;
+        int myNewWidth = (int)myImage.getWidth()/8;
         myImage.scale(myNewWidth, myNewHeight);
         setImage(myImage);
     }
