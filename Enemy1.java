@@ -21,8 +21,26 @@ public class Enemy1 extends Enemy
     }
     public void act()
     {
-        moveEnemy();        
-        removeEnemy();
+        moveEnemy();
+        hitByProjectile();
+    }
+    
+    public void hitByProjectile()
+    {
+        Actor projectile = getOneIntersectingObject(Projectile.class);
+        if (projectile != null)
+        {
+            getWorld().removeObject(projectile);
+            World world = getWorld();
+            MyWorld myWorld = (MyWorld)world;
+            Counter counter = myWorld.getCounter();
+            counter.addScore();
+            getWorld().removeObject(this);
+        }
+        else if (getY() == 599)
+        {
+            getWorld().removeObject(this);
+        }
     }
      
 }

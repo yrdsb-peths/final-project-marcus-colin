@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Actor
 {
+    boolean canFire = true;
     /**
      * Act - do whatever the Plane wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -41,9 +42,14 @@ public class Player extends Actor
     
     public void fireProjectile()
     {
-        if (Greenfoot.isKeyDown("space"))
+        if (Greenfoot.isKeyDown("space") && canFire == true)
         {
             getWorld().addObject(new Projectile(), getX(), getY()-30);
+            canFire = false;
+        }
+        else if (!Greenfoot.isKeyDown("space"))
+        {
+            canFire = true;
         }
     }
     

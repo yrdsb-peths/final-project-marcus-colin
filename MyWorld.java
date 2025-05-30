@@ -1,18 +1,27 @@
 import greenfoot.*;
 
-public class MyWorld extends World {
-    public MyWorld() {
+public class MyWorld extends World 
+{
+    Counter counter = new Counter();
+    public MyWorld()
+    {
         super(600, 600, 1);
         
+        addObject(counter, 100, 50);
         Player player = new Player();
-        addObject(player, 300, 500);
+        addObject(player, 252, 510);
+        player.setLocation(270, 491);
+        player.setLocation(272, 530);
         
         GreenfootImage backgroundImage = new GreenfootImage("spacebg.png");
         setBackground(backgroundImage);
 
         
     }  
-    
+    public Counter getCounter()
+    {
+        return counter;
+    }
     public void act()
     {
           addEnemy1();  
