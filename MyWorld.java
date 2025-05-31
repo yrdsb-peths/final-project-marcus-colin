@@ -2,6 +2,7 @@ import greenfoot.*;
 
 public class MyWorld extends World 
 {
+    HealthBar healthbar = new HealthBar();
     Counter counter = new Counter();
     public MyWorld()
     {
@@ -27,7 +28,10 @@ public class MyWorld extends World
           addEnemy1();  
           addEnemy2();
     }
-    
+    public HealthBar getHealthBar()
+    {
+        return healthbar;
+    }
     
     public void addEnemy1()
     {
