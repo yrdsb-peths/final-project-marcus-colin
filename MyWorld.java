@@ -4,11 +4,13 @@ public class MyWorld extends World
 {
     HealthBar healthbar = new HealthBar();
     Counter counter = new Counter();
+    boolean bossLevel = false;
     public MyWorld()
     {
         super(600, 600, 1);
         
         addObject(counter, 100, 50);
+        addObject(healthbar, 250, 50);
         Player player = new Player();
         addObject(player, 252, 510);
         player.setLocation(270, 491);
@@ -27,10 +29,22 @@ public class MyWorld extends World
     {
           addEnemy1();  
           addEnemy2();
+          Boss();
     }
     public HealthBar getHealthBar()
     {
         return healthbar;
+    }
+    public void Boss()
+    {
+        if (counter.score == 25 || counter.score == 26)
+        {
+            if (bossLevel == false)
+            {
+                addObject(new Boss(), 300, 0);
+                bossLevel = true;
+            }
+        }
     }
     
     public void addEnemy1()

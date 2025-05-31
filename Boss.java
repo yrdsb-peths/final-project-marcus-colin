@@ -1,30 +1,33 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemy1 here.
+ * Write a description of class Boss here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Enemy1 extends Enemy
+public class Boss extends Enemy
 {
-    
-    int speed = 2;
-    
-    public Enemy1()
-    {
-        GreenfootImage myImage = new GreenfootImage("5454-valorant-jett-icon.png");
-        int myNewHeight = (int)myImage.getHeight()/4;
-        int myNewWidth = (int)myImage.getWidth()/3;
-        myImage.scale(myNewWidth, myNewHeight);
-        setImage(myImage);
-    }
+    int timesHit = 10;
+    /**
+     * Act - do whatever the Boss wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act()
     {
         moveEnemy();
         hitByProjectile();
+        
     }
     
+    public Boss()
+    {
+        GreenfootImage myImage = new GreenfootImage("cypher.jpg");
+        int myNewHeight = (int)myImage.getHeight()/3;
+        int myNewWidth = (int)myImage.getWidth()/3;
+        myImage.scale(myNewWidth, myNewHeight);
+        setImage(myImage);
+    }
     public void hitByProjectile()
     {
         Actor projectile = getOneIntersectingObject(Projectile.class);
@@ -35,6 +38,10 @@ public class Enemy1 extends Enemy
             MyWorld myWorld = (MyWorld)world;
             Counter counter = myWorld.getCounter();
             counter.addScore();
+            timesHit--;
+        }
+        if (timesHit == 0)
+        {
             getWorld().removeObject(this);
         }
         else if (getY() == 599)
@@ -43,8 +50,16 @@ public class Enemy1 extends Enemy
             MyWorld myWorld = (MyWorld)world;
             HealthBar healthbar = myWorld.getHealthBar();
             healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
             getWorld().removeObject(this);
         }
     }
-     
 }

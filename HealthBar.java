@@ -23,7 +23,7 @@ public class HealthBar extends Actor
     public void act()
     {
         update();
-        
+        youLose();
     }
     public void update()
     {
@@ -38,5 +38,13 @@ public class HealthBar extends Actor
     public void loseHealth()
     {
         health--;
+    }
+    public void youLose()
+    {
+        if (health == 0)
+        {
+            getWorld().addObject(new YouLose(), 300, 300);
+            Greenfoot.stop();
+        }
     }
 }

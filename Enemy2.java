@@ -47,6 +47,11 @@ public class Enemy2 extends Enemy
         }
         else if (getY() == 599)
         {
+            World world = getWorld();
+            MyWorld myWorld = (MyWorld)world;
+            HealthBar healthbar = myWorld.getHealthBar();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
             getWorld().removeObject(this);
         }
     }
