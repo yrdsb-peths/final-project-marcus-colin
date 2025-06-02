@@ -41,7 +41,7 @@ public class HealthBar extends Actor
     }
     public void youLose()
     {
-        if (health == 0)
+        if (health <= 0)
         {
             getWorld().addObject(new YouLose(), 300, 300);
             Greenfoot.stop();
