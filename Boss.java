@@ -22,7 +22,7 @@ public class Boss extends Enemy
     
     public Boss()
     {
-        GreenfootImage myImage = new GreenfootImage("cypher.jpg");
+        GreenfootImage myImage = new GreenfootImage("cypher.png");
         int myNewHeight = (int)myImage.getHeight()/3;
         int myNewWidth = (int)myImage.getWidth()/3;
         myImage.scale(myNewWidth, myNewHeight);
