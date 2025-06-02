@@ -18,9 +18,9 @@ public class YouLose extends Actor
     }
     public YouLose()
     {
-        GreenfootImage myImage = new GreenfootImage("download.jpg");
-        int myNewHeight = (int)myImage.getHeight()/1;
-        int myNewWidth = (int)myImage.getWidth()/1;
+        GreenfootImage myImage = new GreenfootImage("bg0SRL7.png");
+        int myNewHeight = (int)myImage.getHeight()/2;
+        int myNewWidth = (int)myImage.getWidth()/2;
         myImage.scale(myNewWidth, myNewHeight);
         setImage(myImage);
     }

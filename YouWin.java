@@ -18,7 +18,7 @@ public class YouWin extends Actor
     }
     public YouWin()
     {
-        GreenfootImage myImage = new GreenfootImage("Youwin.jpg");
+        GreenfootImage myImage = new GreenfootImage("victorysign.png");
         int myNewHeight = (int)myImage.getHeight()/1;
         int myNewWidth = (int)myImage.getWidth()/1;
         myImage.scale(myNewWidth, myNewHeight);
