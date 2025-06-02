@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy2 extends Enemy
 {
-    int timesHit = 2;
-    int speed = 2;
+    int timesHit = 3;
+    int speed = 500;
     /**
      * Act - do whatever the Enemy2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -50,6 +50,11 @@ public class Enemy2 extends Enemy
             World world = getWorld();
             MyWorld myWorld = (MyWorld)world;
             HealthBar healthbar = myWorld.getHealthBar();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
             healthbar.loseHealth();
             healthbar.loseHealth();
             getWorld().removeObject(this);

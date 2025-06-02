@@ -28,7 +28,7 @@ public class Counter extends Actor
     }
     public void YouWin()
     {
-        if (score >= 50)
+        if (score >= 100)
         {
             getWorld().addObject(new YouWin(), 300, 300);
             Greenfoot.stop();

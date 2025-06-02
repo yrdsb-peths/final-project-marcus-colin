@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy1 extends Enemy
 {
     
-    int speed = 2;
+    int speed = 500;
     
     public Enemy1()
     {
@@ -42,6 +42,10 @@ public class Enemy1 extends Enemy
             World world = getWorld();
             MyWorld myWorld = (MyWorld)world;
             HealthBar healthbar = myWorld.getHealthBar();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
+            healthbar.loseHealth();
             healthbar.loseHealth();
             getWorld().removeObject(this);
         }

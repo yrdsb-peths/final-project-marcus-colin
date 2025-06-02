@@ -37,7 +37,7 @@ public class MyWorld extends World
     }
     public void Boss()
     {
-        if (counter.score == 25 || counter.score == 26)
+        if (counter.score == 49 || counter.score == 50)
         {
             if (bossLevel == false)
             {
@@ -49,14 +49,14 @@ public class MyWorld extends World
     
     public void addEnemy1()
     {
-        if(Greenfoot.getRandomNumber(100)<1)
+        if(Greenfoot.getRandomNumber(50)<1)
         {
             addObject(new Enemy1(), Greenfoot.getRandomNumber(600), 0);
         }
     }
     public void addEnemy2()
     {
-        if(Greenfoot.getRandomNumber(120)<1)
+        if(Greenfoot.getRandomNumber(60)<1)
         {
             addObject(new Enemy2(), Greenfoot.getRandomNumber(600), 0);
         }
