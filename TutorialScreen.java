@@ -3,9 +3,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class tutorialScreen here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Collin and Marcus) 
+ * @version (June 2025)
  */
+//adds tutorial screen texxt 
 public class TutorialScreen extends World
 {
 
