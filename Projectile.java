@@ -3,9 +3,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Projectile here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Collin and Marcus) 
+ * @version (June 2025)
  */
+
 public class Projectile extends Actor
 {
     /**
@@ -14,6 +15,7 @@ public class Projectile extends Actor
      */
     public Projectile()
     {
+        //sets image for the projectiles used from the player
         GreenfootImage myImage = new GreenfootImage("vandall.png");
         int myNewHeight = (int)myImage.getHeight()/4;
         int myNewWidth = (int)myImage.getWidth()/8;
@@ -29,7 +31,7 @@ public class Projectile extends Actor
     {
         setLocation(getX(), getY() - 5);
     }
-    public void removeFromWorld()
+    public void removeFromWorld() //removes projectiles when it reaches top of the canvas
     {
         if (getY() == 0)
         {
