@@ -1,20 +1,12 @@
-# Set up Greenfoot for VSCode
+Welcome to Val Space Shooter.
+This game is a basic space shooter game, but you eliminate characters from a popular video game - Valorant.
 
-[Mac]
-1. Open `Finder` and navigate to the Applications folder.
-2. Right-click on the Greenfoot app and select `Show Package Contents`.
-3. In the opened folder, go to `Contents -> Resources -> Java` and find the `greenfoot.jar` file.
-4. Copy this `greenfoot.jar` to the `/lib` Folder in this project.
+Instructions are very simple. You press spacebar to shoot projectiles at your enemies, and use left/right arrow key to control your spaceship. 
+Each enemy gives you different amount of points, and has different amount of health. 
+Jett, the girl with white hair is 1 shot.
+Iso, The guy with purple eyes takes 2 shots.
+Cypher, the robot guy takes 5 shots because he's the boss. 
+Each of these enemies gives different amount of damage to your health bar. 
+The stronger the enemy, the more damage it will do to you.
 
-[Windows]
-1. Open `File Explorer` and navigate to `C:\Program Files\Greenfoot` and locate the `greenfoot.jar` file.
-2. Copy this `greenfoot.jar` to the `\lib` Folder in this project.
-
-<br>
-<br>
-
-# project.greenfoot
-Copy the `project.greenfoot.md` file and rename it to `project.greenfoot`
-
-# Learn Markdown Basics
-[Markdown basics](https://www.markdownguide.org/getting-started/)
+Once you teach 100 points, you will see a victory screen, but if your HP bar gets empty, you will see a defeat screen. 
