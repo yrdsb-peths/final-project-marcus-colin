@@ -1,5 +1,5 @@
 import greenfoot.*;
-
+//adds title screen and text
 public class TitleScreen extends World
 {
     Label titleLabel = new Label("Val Space Shooter", 60);
