@@ -3,12 +3,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Boss here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author ( Marcus and Collin) 
+ * @version (June 2025)
  */
 public class Boss extends Enemy
 {
-    int timesHit = 10;
+    int timesHit = 10; //can be hit 10 times
     /**
      * Act - do whatever the Boss wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -19,7 +19,7 @@ public class Boss extends Enemy
         hitByProjectile();
         
     }
-    
+    //boss image
     public Boss()
     {
         GreenfootImage myImage = new GreenfootImage("cypher.png");
@@ -28,7 +28,7 @@ public class Boss extends Enemy
         myImage.scale(myNewWidth, myNewHeight);
         setImage(myImage);
     }
-    public void hitByProjectile()
+    public void hitByProjectile() //projectile hit registration
     {
         Actor projectile = getOneIntersectingObject(Projectile.class);
         if (projectile != null)
