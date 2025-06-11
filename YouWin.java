@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class YouWin here.
+ * creates the image when the player wins the game and plays a sound effect 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Collin and Marcus) 
+ * @version (june 2025)
  */
 public class YouWin extends Actor
 {
@@ -17,6 +17,7 @@ public class YouWin extends Actor
     {
         // Add your action code here.
     }
+    //creates the image when you win the game + sound effects.
     public YouWin()
     {
         GreenfootImage myImage = new GreenfootImage("victorysign.png");
