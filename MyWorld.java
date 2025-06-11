@@ -5,7 +5,7 @@ public class MyWorld extends World
     HealthBar healthbar = new HealthBar();
     Counter counter = new Counter();
     boolean bossLevel = false;
-
+    private GreenfootSound bgMusic = new GreenfootSound("bgmusic.mp3");
     public MyWorld()
     {
         super(600, 600, 1);
@@ -17,8 +17,21 @@ public class MyWorld extends World
         
         GreenfootImage backgroundImage = new GreenfootImage("spacebg.png");
         setBackground(backgroundImage);
+        
+        bgMusic.setVolume(50);
+        bgMusic.playLoop();
     }  
-
+    
+    public void stopped()
+    {
+        bgMusic.pause();
+    }
+    
+    public void started()
+    {
+        bgMusic.playLoop();
+    }
+    
     public Counter getCounter()
     {
         return counter;

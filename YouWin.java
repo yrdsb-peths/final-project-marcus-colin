@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class YouWin extends Actor
 {
+    private GreenfootSound winSound = new GreenfootSound("winsound.mp3");
     /**
      * Act - do whatever the YouWin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -23,5 +24,7 @@ public class YouWin extends Actor
         int myNewWidth = (int)myImage.getWidth()/1;
         myImage.scale(myNewWidth, myNewHeight);
         setImage(myImage);
+        
+        winSound.play();
     }
 }

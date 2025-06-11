@@ -7,7 +7,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class YouLose extends Actor
-{
+{   
+    private GreenfootSound loseSound = new GreenfootSound("losesound.mp3");
     /**
      * Act - do whatever the YouLose wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -23,5 +24,7 @@ public class YouLose extends Actor
         int myNewWidth = (int)myImage.getWidth()/2;
         myImage.scale(myNewWidth, myNewHeight);
         setImage(myImage);
+        
+        loseSound.play();
     }
 }
