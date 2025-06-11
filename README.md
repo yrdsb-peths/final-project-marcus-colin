@@ -9,5 +9,6 @@ Cypher, the robot guy takes 5 shots because he's the boss.
 Cypher spawns at wave 50 and will defeat you instantly if not eliminated in time 
 Each of these enemies gives different amount of damage to your health bar. 
 The stronger the enemy, the more damage it will do to you.
+each projectile that hits an enmy grants you one point until you reach the win limit - 100 
 
 Once you teach 100 points, you will see a victory screen, but if your HP bar gets empty, you will see a defeat screen. 
