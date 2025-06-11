@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Plane here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Collin and Marcus) 
+ * @version (June 2025
  */
 public class Player extends Actor
 {
@@ -15,7 +15,7 @@ public class Player extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    public Player()
+    public Player() //sets player object image
     {
         GreenfootImage myImage = new GreenfootImage("EnemySpaceship.png");
         int myNewHeight = (int)myImage.getHeight()/4;
@@ -28,7 +28,7 @@ public class Player extends Actor
         moveAround();
         fireProjectile();
     }
-    public void moveAround()
+    public void moveAround() //movement for the player
     {
         if(Greenfoot.isKeyDown("right"))
         {
@@ -40,7 +40,7 @@ public class Player extends Actor
         }
     }
     
-    public void fireProjectile()
+    public void fireProjectile() //function to fire projectiles
     {
         if (Greenfoot.isKeyDown("space") && canFire == true)
         {
