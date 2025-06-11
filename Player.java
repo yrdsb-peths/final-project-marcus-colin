@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Player extends Actor
 {
     boolean canFire = true;
+    private boolean spaceWasDown = false;
     /**
      * Act - do whatever the Plane wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -27,7 +28,6 @@ public class Player extends Actor
         moveAround();
         fireProjectile();
     }
-    
     public void moveAround()
     {
         if(Greenfoot.isKeyDown("right"))
@@ -51,6 +51,13 @@ public class Player extends Actor
         {
             canFire = true;
         }
+        boolean spaceIsDown = Greenfoot.isKeyDown("space");
+        if(spaceIsDown && !spaceWasDown)
+        {
+            GreenfootSound shootSound = new GreenfootSound("shootsound.wav");
+            shootSound.play();
+        }
+       
     }
     
 }
