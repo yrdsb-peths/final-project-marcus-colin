@@ -1,11 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class YouLose here.
+ * creates the image when a player loses the game 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Marcus and Collin) 
+ * @version (June 2025)
  */
+//sound for when the player loses
 public class YouLose extends Actor
 {   
     private GreenfootSound loseSound = new GreenfootSound("losesound.mp3");
@@ -17,6 +18,7 @@ public class YouLose extends Actor
     {
         // Add your action code here.
     }
+    //image for when player loses
     public YouLose()
     {
         GreenfootImage myImage = new GreenfootImage("bg0SRL7.png");
