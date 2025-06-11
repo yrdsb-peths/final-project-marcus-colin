@@ -8,14 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy2 extends Enemy
 {
-    int timesHit = 3;
-    int speed = 500;
+    int timesHit = 3; // how many times they can get hit 
+    int speed = 500; //enemy speed for enemy 2
     /**
      * Act - do whatever the Enemy2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    public Enemy2()
+    public Enemy2() // image for the enemy 
     {
         GreenfootImage myImage = new GreenfootImage("iso.png");
         int myNewHeight = (int)myImage.getHeight()/4;
@@ -29,7 +29,7 @@ public class Enemy2 extends Enemy
         hitByProjectile();
     }
     
-    public void hitByProjectile()
+    public void hitByProjectile() //registering for the projectile hit 
     {
         Actor projectile = getOneIntersectingObject(Projectile.class);
         if (projectile != null)
