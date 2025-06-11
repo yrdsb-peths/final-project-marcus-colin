@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class HealthBar here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Marcus and Collin) 
+ * @version (June 2025)
  */
 public class HealthBar extends Actor
 {
@@ -25,7 +25,7 @@ public class HealthBar extends Actor
         update();
         youLose();
     }
-    public void update()
+    public void update() //image size for healthbar and filling
     {
         setImage(new GreenfootImage(healthBarWidth + 2, healthBarHeight + 2));
         GreenfootImage myImage = getImage();
@@ -35,11 +35,11 @@ public class HealthBar extends Actor
         myImage.fillRect(1, 1, health*pixelsPerHealthPoint, healthBarHeight);
         
     }
-    public void loseHealth()
+    public void loseHealth() //function for losing health
     {
         health--;
     }
-    public void youLose()
+    public void youLose() //registering loss function when health is == 0 
     {
         if (health <= 0)
         {
